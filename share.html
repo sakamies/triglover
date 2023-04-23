@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>Share Trigons</title>
+  <meta name="description" content="Draw with triangles.">
+  <meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta http-equiv="imagetoolbar" content="false" />
+  <link rel="icon" href="assets/img/triglover.png">
+  <link rel="stylesheet" href="assets/css/triglover.css">
+</head>
+<body>
+
+  <div class="form share-form">
+    <label for="shareurl">Share url</label>
+    <br>
+    <input id="shareurl" type="text" name="share" autofocus readonly>
+    <br>
+    <br>
+    <div>
+      <button id="save-svg" class="button download">Download SVG</button>
+      <!-- <button id="save-png" class="button download">png</button> -->
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <a href="new.html" class="button">New</a>
+    <button id="back">Back</button>
+  </div>
+
+  <script src="assets/js/FileSaver.min.js"></script>
+  <script src="assets/js/lz-string.min.js"></script>
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/share.js"></script>
+
+</body>
+</html>

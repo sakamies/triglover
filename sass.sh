@@ -1,0 +1,1 @@
+sass --watch assets/scss/triglover.scss:assets/css/triglover.css 
