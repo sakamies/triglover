@@ -32,6 +32,7 @@ function selectInput(event) {
   u.selectText(target);
 }
 
-document.querySelectorAll('input')[0].addEventListener('focus', selectInput);
-document.querySelectorAll('input')[1].addEventListener('focus', selectInput);
-document.querySelector('form').addEventListener('mouseup', selectInput);
+//Yeah these don't really work for number inputs.
+// document.querySelectorAll('input')[0].addEventListener('focus', selectInput);
+// document.querySelectorAll('input')[1].addEventListener('focus', selectInput);
+// document.querySelector('form').addEventListener('mouseup', selectInput);
