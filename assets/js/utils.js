@@ -77,6 +77,6 @@ u.getUrlRoot = function () {
   if (location.hostname == 'localhost') {
     return location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: '');
   } else {
-    return 'http://apps.workflower.fi/triglover';
+    return 'https://triglover.space';
   }
 }
