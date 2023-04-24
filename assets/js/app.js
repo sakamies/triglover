@@ -63,7 +63,7 @@ app.renderSvg = function (pic) {
         polyId = 0;
       }
       //buf += '  <use fill="'+app.colors[pic[index]]+'" xlink:href="#'+triDir+'" x="'+x+'" y="'+y+'" data-i="'+index+'"></use>\n';
-      buf += '<polygon id="off" fill="'+app.colors[pic[index]]+'" transform="translate('+x+','+y+')" points="'+poly[polyId]+'" data-i="'+index+'"></polygon>\n';
+      buf += '<polygon id="off" fill="'+app.colors[pic[index]]+'" transform="translate('+x+','+y+')" points="'+poly[polyId]+'" data-i="'+index+'" tabindex="0"></polygon>\n';
     }
   }
   buf += '</svg>';
@@ -119,6 +119,27 @@ app.drawPixel = function (target, bit) {
   app.pic[index] = bit;
 }
 
+app.getBit = function (target) {
+  if (target.getAttribute('fill') == app.colors[0]) {
+    return 1;
+  } else {
+    return 0;
+  }
+}
+
+app.keyDraw = function (event) {
+  //TODO: keyboard navigation on the canvas
+  //TODO: Any sort of screen reader support to go with key support?
+  const key = event.key;
+  const target = event.target;
+  console.log(key)
+  if (event.key == 'Enter' || event.key == ' ') {
+    event.preventDefault()
+    const bit = app.getBit(target);
+    app.drawPixel(target, bit);
+  }
+}
+
 app.drawStart = function (event) {
   var touches = event.touches || '';
   var numOfTouches = touches.length;
@@ -131,12 +152,7 @@ app.drawStart = function (event) {
     app.drawOn = true;
 
     //TODO: ugh, need to manage svg<->pic relation better
-    if (target.getAttribute('fill') == app.colors[0]) {
-      bit = 1;
-    } else {
-      bit = 0;
-    }
-
+    bit = app.getBit(target)
     app.drawPixel(target, bit);
   }
 };

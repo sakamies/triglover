@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   document.addEventListener('touchend', app.drawEnd);
   document.addEventListener('mouseup', app.drawEnd);
   document.addEventListener('mouseleave', app.drawEnd);
+  document.addEventListener('keydown', app.keyDraw);
 
   document.querySelector('.toolbar').addEventListener('submit', function (event) {
     //TODO: Fill <input type="hidden" name="d"> on submit, not on every save
