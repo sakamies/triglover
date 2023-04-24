@@ -91,6 +91,13 @@ img {
   margin: auto;
   background: transparent;
 }
+#tris polygon:focus {
+  stroke: gray;
+  stroke-width: 3px;
+  outline: none;
+  position: relative;
+  z-index: 2;
+}
 
 
 form,
