@@ -9,14 +9,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   app.init();
 
-  document.addEventListener('touchstart', app.drawStart);
-  document.addEventListener('mousedown', app.drawStart);
-  document.addEventListener('touchmove', app.drawMove);
-  document.addEventListener('mousemove', app.drawMove);
-  document.addEventListener('touchend', app.drawEnd);
-  document.addEventListener('mouseup', app.drawEnd);
-  document.addEventListener('mouseleave', app.drawEnd);
-  document.addEventListener('keydown', app.keyDraw);
+  document.addEventListener('touchstart', app.drawStart, {passive: false});
+  document.addEventListener('mousedown', app.drawStart, {passive: false});
+  document.addEventListener('touchmove', app.drawMove, {passive: false});
+  document.addEventListener('mousemove', app.drawMove, {passive: false});
+  document.addEventListener('touchend', app.drawEnd, {passive: false});
+  document.addEventListener('mouseup', app.drawEnd, {passive: false});
+  document.addEventListener('mouseleave', app.drawEnd, {passive: false});
+  document.addEventListener('keydown', app.keyDraw, {passive: false});
 
   document.querySelector('.toolbar').addEventListener('submit', function (event) {
     //TODO: Fill <input type="hidden" name="d"> on submit, not on every save
