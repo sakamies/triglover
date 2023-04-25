@@ -18,9 +18,11 @@ body {
   text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   justify-content: start;
   color: #999999;
+  width: min-content;
+  margin: auto;
   background-color: #313138;
   user-select: none;
 }
@@ -33,6 +35,13 @@ body > :first-child {
 body > :last-child {
   margin-bottom: auto;
   padding-bottom: 63px;
+}
+
+body > * {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 21px;
+  padding-right: 21px;
 }
 
 a {
@@ -98,6 +107,7 @@ img {
   margin: auto;
   background: transparent;
 }
+
 #tris polygon:focus {
   stroke: gray;
   stroke-width: 3px;
