@@ -35,7 +35,6 @@ u.centerViewport = function () {
 
 }
 u.selectText = function (event) {
-  console.log(event);
   var target;
   //Grab event or element
   if (event.target != undefined) {

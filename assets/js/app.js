@@ -132,7 +132,6 @@ app.keyDraw = function (event) {
   //TODO: Any sort of screen reader support to go with key support?
   const key = event.key;
   const target = event.target;
-  console.log(key)
   if (event.key == 'Enter' || event.key == ' ') {
     event.preventDefault()
     const bit = app.getBit(target);
